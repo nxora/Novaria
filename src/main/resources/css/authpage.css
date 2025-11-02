@@ -1,0 +1,62 @@
+.root {
+    -fx-font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.auth-card {
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-background-radius: 20;
+    -fx-padding: 30;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 20, 0, 0, 6);
+}
+
+.auth-title {
+    -fx-font-size: 28px;
+    -fx-text-fill: #F5E9E0;
+    -fx-font-weight: bold;
+}
+
+.auth-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #E7D1BF;
+}
+
+.input-field {
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-pref-width: 280;
+    -fx-background-color: rgba(255,255,255,0.8);
+    -fx-font-size: 13px;
+}
+
+.main-btn {
+    -fx-background-color: #8B5E3C;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 25;
+    -fx-background-radius: 10;
+}
+.main-btn:hover {
+    -fx-background-color: #70452D;
+}
+
+/* 🌐 Social Buttons */
+.social-btn {
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 2);
+}
+
+.social-btn:hover {
+    -fx-background-color: #f5f5f5;
+}
+
+#googleBtn .label, #facebookBtn .label {
+    -fx-font-size: 15px;
+    -fx-text-fill: #333;
+}
+
+

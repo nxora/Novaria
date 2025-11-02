@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane fx:id="rootPane" xmlns:fx="http://javafx.com/fxml" fx:controller="org.novaria.view_ui.HomePageController">
+    <!-- 🧭 Top Navbar -->
+    <top>
+        <HBox spacing="20" style="-fx-background-color: rgba(0,0,0,0.7); -fx-padding: 15;">
+            <Label text="📚 Novaria" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <TextField fx:id="searchField" promptText="Search books..."
+                       HBox.hgrow="ALWAYS"
+                       style="-fx-background-radius: 20; -fx-prompt-text-fill: #bbb; -fx-text-fill: white;"/>
+            <Button fx:id="profileButton" text="👤"
+                    style="-fx-background-color: transparent; -fx-font-size: 20px; -fx-text-fill: white;"/>
+        </HBox>
+    </top>
+
+    <!-- 🪄 Main Content -->
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background: transparent; -fx-padding: 10;">
+            <VBox spacing="25"><padding><Insets top="20" bottom="20" left="20" right="20"/></padding>
+
+                <!-- 🌟 Featured Section -->
+                <VBox spacing="10">
+                    <Label text="Featured" style="-fx-font-size: 18px; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                    <ScrollPane hbarPolicy="NEVER" vbarPolicy="NEVER" style="-fx-background: transparent;">
+                        <HBox fx:id="featuredContainer" spacing="15">
+                            <padding>
+                                <Insets top="10" right="10" bottom="10" left="10"/>
+                            </padding>
+                        </HBox>
+
+                    </ScrollPane>
+                </VBox>
+
+                <!-- 📚 Category Section -->
+                <VBox fx:id="categoryContainer" spacing="20">
+                    <VBox spacing="10">
+                        <Label text="Mystery" style="-fx-font-size: 16px; -fx-text-fill: white;"/>
+                        <ScrollPane hbarPolicy="NEVER" vbarPolicy="NEVER" style="-fx-background: transparent;">
+                            <HBox fx:id="mysteryContainer" spacing="15">
+                                <padding><Insets top="10" bottom="10" left="10" right="10"/></padding>
+                            </HBox>
+
+                        </ScrollPane>
+                    </VBox>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

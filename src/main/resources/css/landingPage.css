@@ -1,0 +1,92 @@
+/* 🪵 Full background */
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", "Poppins", sans-serif;
+}
+
+/* 🖼 Overlay */
+#overlayRect {
+    -fx-fill: rgba(0, 0, 0, 0.45); /* soft black transparent overlay */
+    -fx-width: 100%;
+    -fx-height: 100%;
+}
+
+/* 🪄 Hero text */
+.hero-title {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E7D1BF;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 6, 0, 0, 2);
+}
+
+.hero-subtitle {
+    -fx-font-size: 18px;
+    -fx-text-fill: #F5E9E0;
+    -fx-opacity: 0.9;
+}
+
+.heroImage {
+    -fx-smooth: true;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-cache: true;
+    -fx-cache-hint: speed;
+}
+
+/* 🌿 Center section */
+.center-section {
+    -fx-padding: 40;
+     -fx-background-color: rgba(244, 227, 215, 0.9); /* soft cream with transparency */
+     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 20, 0.3, 0, 0);
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-width: 1;
+    -fx-background-radius: 20 20 0 0;
+    -fx-border-radius: 20 20 0 0;
+}
+
+
+.center-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4C2F1D;
+}
+
+.center-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5E4633;
+}
+
+.main-btn {
+    -fx-background-color: linear-gradient(to right, #8B5E3C, #70452D);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0.3, 0, 2);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.main-btn:hover {
+    -fx-background-color: linear-gradient(to right, #A06A45, #8B5E3C);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(255, 200, 150, 0.4), 12, 0.5, 0, 0);
+}
+
+
+/* 📝 Footer */
+.footer {
+    -fx-padding: 10;
+         -fx-background-color: rgba(244, 227, 215, 0.9); /* soft cream with transparency */
+    -fx-background-radius: 0 0 20 20;
+}
+
+.footer-link {
+    -fx-text-fill: #8B5E3C;
+    -fx-font-weight: bold;
+    -fx-underline: false;
+}
+.footer-link:hover {
+    -fx-text-fill: #70452D;
+    -fx-underline: true;
+}

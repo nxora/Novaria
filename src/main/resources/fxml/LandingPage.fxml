@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+ <?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.Rectangle?>
+
+<StackPane fx:id="root"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="org.novaria.view_ui.LandingPageController"
+           stylesheets="@../css/landingPage.css">
+
+    <!-- 🖼 Background Layer -->
+    <ImageView fx:id="heroImage"
+               preserveRatio="false" smooth="true" cache="true" StackPane.alignment="CENTER"/>
+
+    <!-- 🌫 Overlay Layer -->
+    <Rectangle fx:id="overlayRect" StackPane.alignment="CENTER">
+        <effect>
+            <GaussianBlur radius="12"/>
+        </effect>
+    </Rectangle>
+
+    <!-- 🧭 Main UI Content (on top of background + overlay) -->
+    <BorderPane fx:id="mainContent" maxWidth="550">
+
+        <!-- ✨ Hero Text -->
+        <top>
+            <VBox alignment="CENTER" spacing="5" styleClass="hero-container">
+                <Label text="Welcome to Novaria" styleClass="hero-title"/>
+                <Label text="Where stories come alive." styleClass="hero-subtitle"/>
+            </VBox>
+        </top>
+
+        <!-- 📚 Center Content -->
+        <center>
+            <VBox spacing="15" alignment="CENTER" styleClass="center-section">
+                <Label text="Escape into stories that never end." styleClass="center-title"/>
+                <Label text="Your digital library for discovering and reading your favorite books." styleClass="center-subtitle"/>
+                <HBox spacing="10" alignment="CENTER">
+                    <Button text="Login" styleClass="main-btn" onAction="#onLoginClicked"/>
+                    <Button text="Sign Up" styleClass="main-btn" onAction="#onLoginClicked"/>
+                </HBox>
+            </VBox>
+        </center>
+
+        <!-- 📝 Footer -->
+        <bottom>
+            <HBox alignment="CENTER" spacing="15" styleClass="footer">
+                <Label text="Made with ❤️ by Daveora"/>
+                <Label text="|"/>
+                <Label text="All Rights Reserved © 2025"/>
+                <Hyperlink text="GitHub" onAction="#openGitHub" styleClass="footer-link"/>
+                <Hyperlink text="Snapchat" onAction="#openSnapchat" styleClass="footer-link"/>
+            </HBox>
+        </bottom>
+
+    </BorderPane>
+
+</StackPane>
